@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>ItmoScheduleApiWrapper</AssemblyName>
+    <RootNamespace>ItmoScheduleApiWrapper</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

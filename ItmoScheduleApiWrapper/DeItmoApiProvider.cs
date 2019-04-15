@@ -1,6 +1,6 @@
 ﻿using Refit;
 
-namespace DeItmoApiWrapper
+namespace ItmoScheduleApiWrapper
 {
     public class DeItmoApiProvider
     {
