@@ -1,29 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using DeItmoApiWrapper;
 using DeItmoApiWrapper.Models;
 
 namespace DeItmpApiWrapper.Samples
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var provider = new DeItmoApiProvider();
             Task<GroupScheduleModel> task = provider.ScheduleApi.GetGroupSchedule("M3305");
-            List<GroupScheduleItemModel> lessonList = task.Result.Schedule;
+            List<ScheduleItemModel> lessonList = task.Result.Schedule;
 
-            foreach (GroupScheduleItemModel itemModel in lessonList)
+            foreach (ScheduleItemModel itemModel in lessonList)
             {
                 Console.WriteLine(itemModel.Title);
             }
 
             Task<PersonListModel> personList = provider.ScheduleApi.GetPersonList(10);
             Console.WriteLine(personList.Result.Offset);
-            foreach (PersonListItemModel person in personList.Result.List)
+            foreach (PersonListItemModel person in personList.Result.List.Take(5))
             {
                 Console.WriteLine(person.Person);
+            }
+
+            Task<PersonScheduleModel> personSchedule = provider.ScheduleApi.GetPersonSchedule(116501);
+            Console.WriteLine(personSchedule.Result.PersonName);
+            foreach (ScheduleItemModel itemModel in personSchedule.Result.Schedule)
+            {
+                Console.WriteLine(itemModel.Title);
             }
         }
     }
