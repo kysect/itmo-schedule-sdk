@@ -1,4 +1,4 @@
-﻿namespace DeItmoApiWrapper.Models
+﻿namespace ItmoScheduleApiWrapper.Models
 {
     public class RoomModel
     {

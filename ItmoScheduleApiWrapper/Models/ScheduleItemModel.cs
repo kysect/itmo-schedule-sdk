@@ -1,7 +1,7 @@
-﻿using DeItmoApiWrapper.Types;
+﻿using ItmoScheduleApiWrapper.Types;
 using Newtonsoft.Json;
 
-namespace DeItmoApiWrapper.Models
+namespace ItmoScheduleApiWrapper.Models
 {
     public class ScheduleItemModel
     {

@@ -1,4 +1,4 @@
-﻿namespace DeItmoApiWrapper.Types
+﻿namespace ItmoScheduleApiWrapper.Types
 {
     public enum DataWeekType
     {

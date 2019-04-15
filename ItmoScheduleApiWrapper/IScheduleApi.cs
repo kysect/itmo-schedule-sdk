@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using DeItmoApiWrapper.Models;
+using ItmoScheduleApiWrapper.Models;
 using Refit;
 
-namespace DeItmoApiWrapper
+namespace ItmoScheduleApiWrapper
 {
     public interface IScheduleApi
     {

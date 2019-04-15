@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DeItmoApiWrapper;
-using DeItmoApiWrapper.Models;
+using ItmoScheduleApiWrapper.Models;
 
-namespace DeItmpApiWrapper.Samples
+namespace ItmoScheduleApiWrapper.Samples
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var provider = new DeItmoApiProvider();
             Task<GroupScheduleModel> task = provider.ScheduleApi.GetGroupSchedule("M3305");
