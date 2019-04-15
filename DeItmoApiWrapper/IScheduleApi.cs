@@ -8,9 +8,9 @@ namespace DeItmoApiWrapper
     public interface IScheduleApi
     {
         [Get("/schedule_lesson_room")]
-        Task<List<RoomModel>> GetLessonRoomList();
+        Task<List<RoomModel>> GetRoomList();
 
         [Get("/schedule_lesson_group/{group}")]
-        Task<GroupScheduleModel> GetLessonGroupSchedule(string group);
+        Task<GroupScheduleModel> GetGroupSchedule(string group);
     }
 }

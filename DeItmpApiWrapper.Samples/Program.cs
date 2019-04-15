@@ -11,7 +11,7 @@ namespace DeItmpApiWrapper.Samples
         static void Main(string[] args)
         {
             var provider = new DeItmoApiProvider();
-            Task<GroupScheduleModel> task = provider.ScheduleApi.GetLessonGroupSchedule("M3305");
+            Task<GroupScheduleModel> task = provider.ScheduleApi.GetGroupSchedule("M3305");
             List<GroupScheduleItemModel> lessonList = task.Result.Schedule;
 
             foreach (GroupScheduleItemModel itemModel in lessonList)

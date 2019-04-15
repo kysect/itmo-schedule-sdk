@@ -1,11 +1,17 @@
-﻿namespace DeItmoApiWrapper.Models
+﻿using DeItmoApiWrapper.Types;
+using Newtonsoft.Json;
+
+namespace DeItmoApiWrapper.Models
 {
     public class GroupScheduleItemModel
     {
-        public int DataDay { get; set; }
+        [JsonProperty(PropertyName = "data_day")]
+        public DataDayType DataDay { get; set; }
         public string Status { get; set; }
-        public int DataWeek { get; set; }
+        [JsonProperty(PropertyName = "data_week")]
+        public DataWeekType DataWeek { get; set; }
         public string Group { get; set; }
+        [JsonProperty(PropertyName = "subj_time")]
         public string SubjectTime { get; set; }
         public int Sortp { get; set; }
         public string Room { get; set; }
@@ -14,11 +20,16 @@
         public string Note { get; set; }
         public string Teacher { get; set; }
         public int? Pid { get; set; }
+        [JsonProperty(PropertyName = "bld_id")]
         public int? BldId { get; set; }
+        [JsonProperty(PropertyName = "cathedra_bun_id")]
         public int? CathedraBunId { get; set; }
+        [JsonProperty(PropertyName = "faculty_bun_id")]
         public int? FacultyBunId { get; set; }
         public int Course { get; set; }
+        [JsonProperty(PropertyName = "start_time")]
         public string StartTime { get; set; }
+        [JsonProperty(PropertyName = "end_time")]
         public string EndTime { get; set; }
     }
 }
