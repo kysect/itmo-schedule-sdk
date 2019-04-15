@@ -18,6 +18,13 @@ namespace DeItmpApiWrapper.Samples
             {
                 Console.WriteLine(itemModel.Title);
             }
+
+            Task<PersonListModel> personList = provider.ScheduleApi.GetPersonList(10);
+            Console.WriteLine(personList.Result.Offset);
+            foreach (PersonListItemModel person in personList.Result.List)
+            {
+                Console.WriteLine(person.Person);
+            }
         }
     }
 }

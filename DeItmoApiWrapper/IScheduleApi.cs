@@ -12,5 +12,8 @@ namespace DeItmoApiWrapper
 
         [Get("/schedule_lesson_group/{group}")]
         Task<GroupScheduleModel> GetGroupSchedule(string group);
+
+        [Get("/schedule_person")]
+        Task<PersonListModel> GetPersonList(int offset); 
     }
 }
