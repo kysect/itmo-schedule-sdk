@@ -10,7 +10,7 @@ namespace ItmoScheduleApiWrapper.Samples
     {
         private static void Main()
         {
-            var provider = new DeItmoApiProvider();
+            var provider = new ItmoApiProvider();
             Task<GroupScheduleModel> task = provider.ScheduleApi.GetGroupSchedule("M3305");
             List<ScheduleItemModel> lessonList = task.Result.Schedule;
 
