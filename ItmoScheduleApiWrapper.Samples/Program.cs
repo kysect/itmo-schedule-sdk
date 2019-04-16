@@ -16,8 +16,8 @@ namespace ItmoScheduleApiWrapper.Samples
 
             foreach (ScheduleItemModel itemModel in lessonList)
             {
-                Console.WriteLine(itemModel.Title);
-            }
+                Console.WriteLine(itemModel.SubjectTitle);
+            }   
 
             Task<PersonListModel> personList = provider.ScheduleApi.GetPersonList(10);
             Console.WriteLine(personList.Result.Offset);
@@ -30,7 +30,7 @@ namespace ItmoScheduleApiWrapper.Samples
             Console.WriteLine(personSchedule.Result.PersonName);
             foreach (ScheduleItemModel itemModel in personSchedule.Result.Schedule)
             {
-                Console.WriteLine(itemModel.Title);
+                Console.WriteLine(itemModel.SubjectTitle);
             }
         }
     }
