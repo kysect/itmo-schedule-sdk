@@ -21,7 +21,8 @@ namespace ItmoScheduleApiWrapper.Models
         public int Sortp { get; set; }
         public string Room { get; set; }
         public string Place { get; set; }
-        public string Title { get; set; }
+        [JsonProperty(PropertyName = "title")]
+        public string SubjectTitle { get; set; }
         public string Note { get; set; }
 
         [JsonProperty(PropertyName = "person")]
