@@ -1,9 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>ItmoScheduleApiWrapper</AssemblyName>
     <RootNamespace>ItmoScheduleApiWrapper</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Alexey Ivnitskiy</Authors>
+    <Description>ITMO schedule API implementation for C#</Description>
+    <RepositoryUrl>https://github.com/InRedikaWB/ItmoApiWrapper</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/InRedikaWB/ItmoApiWrapper</PackageProjectUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseUrl>https://github.com/InRedikaWB/ItmoApiWrapper/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
