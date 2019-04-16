@@ -12,8 +12,10 @@ namespace ItmoScheduleApiWrapper
         }
 
         /// <summary>
-        /// API provider
+        ///     API provider
         /// </summary>
         public IScheduleApi ScheduleApi { get; }
+
+        public static IScheduleApi Instance { get; } = RestService.For<IScheduleApi>(ApiUrl);
     }
 }
