@@ -29,5 +29,15 @@ namespace ItmoScheduleApiWrapper.Helpers
                     throw new ArgumentOutOfRangeException(nameof(weekType), weekType, null);
             }
         }
+
+        /// <summary>
+        /// Covert <see cref="System.DayOfWeek"/> to <see cref="DataDayType"/>
+        /// </summary>
+        public static DataDayType ConvertToItmoDayType(this DayOfWeek dayOfWeek)
+        {
+            var dayType = (int)dayOfWeek;
+            int itmoDayType = dayType == 0 ? 6 : dayType - 1;
+            return (DataDayType)itmoDayType;
+        }
     }
 }
