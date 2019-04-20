@@ -10,7 +10,14 @@ namespace ItmoScheduleApiWrapper.Helpers
     {
         public static List<ScheduleItemModel> GetTodaySchedule(this IEnumerable<ScheduleItemModel> scheduleItemList, DateConvertorService convertor)
         {
-            (DataDayType dayType, DataWeekType weekType) dayType = convertor.Convert(DateTime.Today);
+            return GetDaySchedule(scheduleItemList, DateTime.Now, convertor);
+        }
+
+        public static List<ScheduleItemModel> GetDaySchedule(this IEnumerable<ScheduleItemModel> scheduleItemList,
+            DateTime dayTime,
+            DateConvertorService convertor)
+        {
+            (DataDayType dayType, DataWeekType weekType) dayType = convertor.Convert(dayTime);
             return DayTypeScheduleFilter.Filter(scheduleItemList, dayType.weekType, dayType.dayType);
         }
     }
