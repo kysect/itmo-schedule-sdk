@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ItmoScheduleApiWrapper.Helpers;
 using ItmoScheduleApiWrapper.Models;
 
 namespace ItmoScheduleApiWrapper.Samples
@@ -11,13 +12,14 @@ namespace ItmoScheduleApiWrapper.Samples
         private static void Main()
         {
             var provider = new ItmoApiProvider();
+
             Task<GroupScheduleModel> task = provider.ScheduleApi.GetGroupSchedule("M3305");
             List<ScheduleItemModel> lessonList = task.Result.Schedule;
 
             foreach (ScheduleItemModel itemModel in lessonList)
             {
                 Console.WriteLine(itemModel.SubjectTitle);
-            }   
+            }
 
             Task<PersonListModel> personList = provider.ScheduleApi.GetPersonList(10);
             Console.WriteLine(personList.Result.Offset);
@@ -29,6 +31,17 @@ namespace ItmoScheduleApiWrapper.Samples
             Task<PersonScheduleModel> personSchedule = provider.ScheduleApi.GetPersonSchedule(116501);
             Console.WriteLine(personSchedule.Result.PersonName);
             foreach (ScheduleItemModel itemModel in personSchedule.Result.Schedule)
+            {
+                Console.WriteLine(itemModel.SubjectTitle);
+            }
+
+            List<ScheduleItemModel> todaySchedule = provider.ScheduleApi
+                .GetGroupSchedule("M3305")
+                .Result
+                .Schedule
+                .GetTodaySchedule(DateConvertorService.FirstWeekEven);
+
+            foreach (ScheduleItemModel itemModel in todaySchedule)
             {
                 Console.WriteLine(itemModel.SubjectTitle);
             }

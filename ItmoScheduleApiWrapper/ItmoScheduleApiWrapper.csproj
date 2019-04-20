@@ -11,6 +11,7 @@
     <PackageProjectUrl>https://github.com/InRedikaWB/ItmoApiWrapper</PackageProjectUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseUrl>https://github.com/InRedikaWB/ItmoApiWrapper/blob/master/LICENSE</PackageLicenseUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
