@@ -13,6 +13,7 @@ namespace ItmoScheduleApiWrapper.Models
         [JsonProperty(PropertyName = "data_week")]
         public DataWeekType DataWeek { get; set; }
 
+        [JsonProperty(PropertyName = "gr")]
         public string Group { get; set; }
 
         [JsonProperty(PropertyName = "subj_time")]
