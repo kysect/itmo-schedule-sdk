@@ -18,7 +18,7 @@ namespace ItmoScheduleApiWrapper.Helpers
             DateConvertorService convertor)
         {
             (DataDayType dayType, DataWeekType weekType) dayType = convertor.Convert(dayTime);
-            return DayTypeScheduleFilter.Filter(scheduleItemList, dayType.weekType, dayType.dayType);
+            return DayTypeScheduleFilter.FilterBy(scheduleItemList, dayType.weekType, dayType.dayType);
         }
     }
 }

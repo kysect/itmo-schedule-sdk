@@ -13,7 +13,7 @@ namespace ItmoScheduleApiWrapper.Samples
         {
             var provider = new ItmoApiProvider();
 
-            Task<GroupScheduleModel> task = provider.ScheduleApi.GetGroupSchedule("M3305");
+            Task<GroupScheduleModel> task = provider.ScheduleApi.GetGroupScheduleAsync("M3305");
             List<ScheduleItemModel> lessonList = task.Result.Schedule;
 
             foreach (ScheduleItemModel itemModel in lessonList)
@@ -21,14 +21,14 @@ namespace ItmoScheduleApiWrapper.Samples
                 Console.WriteLine(itemModel.SubjectTitle);
             }
 
-            Task<PersonListModel> personList = provider.ScheduleApi.GetPersonList(10);
+            Task<PersonListModel> personList = provider.ScheduleApi.GetPersonListAsync(10);
             Console.WriteLine(personList.Result.Offset);
             foreach (PersonListItemModel person in personList.Result.List.Take(5))
             {
                 Console.WriteLine(person.Person);
             }
 
-            Task<PersonScheduleModel> personSchedule = provider.ScheduleApi.GetPersonSchedule(116501);
+            Task<PersonScheduleModel> personSchedule = provider.ScheduleApi.GetPersonScheduleAsync(116501);
             Console.WriteLine(personSchedule.Result.PersonName);
             foreach (ScheduleItemModel itemModel in personSchedule.Result.Schedule)
             {
@@ -36,7 +36,7 @@ namespace ItmoScheduleApiWrapper.Samples
             }
 
             List<ScheduleItemModel> todaySchedule = provider.ScheduleApi
-                .GetGroupSchedule("M3305")
+                .GetGroupScheduleAsync("M3305")
                 .Result
                 .Schedule
                 .GetTodaySchedule(DateConvertorService.FirstWeekEven);

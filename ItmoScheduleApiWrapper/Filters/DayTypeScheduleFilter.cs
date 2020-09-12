@@ -7,21 +7,17 @@ namespace ItmoScheduleApiWrapper.Filters
 {
     public static class DayTypeScheduleFilter
     {
-        public static List<ScheduleItemModel> Filter(this IEnumerable<ScheduleItemModel> lessonList, DataWeekType weekType)
+        public static IEnumerable<ScheduleItemModel> FilterBy(this IEnumerable<ScheduleItemModel> lessonList, DataWeekType weekType)
         {
-            return lessonList
-                .Where(lesson => lesson.DataWeek.Compare(weekType))
-                .ToList();
+            return lessonList.Where(lesson => lesson.DataWeek.Compare(weekType));
         }
 
-        public static List<ScheduleItemModel> Filter(this IEnumerable<ScheduleItemModel> lessonList, DataDayType dayType)
+        public static IEnumerable<ScheduleItemModel> FilterBy(this IEnumerable<ScheduleItemModel> lessonList, DataDayType dayType)
         {
-            return lessonList
-                .Where(lesson => lesson.DataDay == dayType)
-                .ToList();
+            return lessonList.Where(lesson => lesson.DataDay == dayType);
         }
 
-        public static List<ScheduleItemModel> Filter(this IEnumerable<ScheduleItemModel> lessonList, DataWeekType weekType, DataDayType dayType)
+        public static List<ScheduleItemModel> FilterBy(this IEnumerable<ScheduleItemModel> lessonList, DataWeekType weekType, DataDayType dayType)
         {
             return lessonList
                 .Where(lesson => lesson.DataWeek.Compare(weekType) && lesson.DataDay == dayType)

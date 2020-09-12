@@ -9,7 +9,7 @@ namespace ItmoScheduleApiWrapper.Filters
     {
         public async Task<List<ScheduleItemModel>> GetScheduleForGroups(int personId, params string[] groups)
         {
-            PersonScheduleModel teacherSchedule = await ItmoApiProvider.Instance.GetPersonSchedule(personId);
+            PersonScheduleModel teacherSchedule = await ItmoApiProvider.Instance.GetPersonScheduleAsync(personId);
 
             return teacherSchedule.Schedule
                 .Where(lesson => groups.Contains(lesson.Group))
@@ -18,7 +18,7 @@ namespace ItmoScheduleApiWrapper.Filters
 
         public async Task<List<ScheduleItemModel>> GetScheduleForSubjectName(int personId, string subjectTitle)
         {
-            PersonScheduleModel teacherSchedule = await ItmoApiProvider.Instance.GetPersonSchedule(personId);
+            PersonScheduleModel teacherSchedule = await ItmoApiProvider.Instance.GetPersonScheduleAsync(personId);
 
             return teacherSchedule.Schedule
                 .Where(lesson => lesson.SubjectTitle.Equals(subjectTitle))
