@@ -1,4 +1,6 @@
-﻿using ItmoScheduleApiWrapper.Types;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ItmoScheduleApiWrapper.Types;
 using Newtonsoft.Json;
 
 namespace ItmoScheduleApiWrapper.Models
@@ -47,5 +49,39 @@ namespace ItmoScheduleApiWrapper.Models
 
         [JsonProperty(PropertyName = "end_time")]
         public string EndTime { get; set; }
+
+        public bool IsLecture()
+        {
+            return Status == "Лек";
+        }
+
+        public string ShortSubjectTitle()
+        {
+            return (IsLecture() ? "[П]" : "[Л]") + " " + SubjectTitle;
+        }
+
+        public string ShortTeacherName()
+        {
+            if (string.IsNullOrEmpty(Teacher))
+                return Teacher;
+
+            string[] parts = Teacher.Split(' ');
+            for (var i = 1; i < parts.Length; i++)
+                parts[i] = $"{parts[i][0]}.";
+
+            return string.Join(" ", parts);
+        }
+    }
+
+    public static class ScheduleItemModelExtensions
+    {
+        public static IEnumerable<ScheduleItemModel> ScheduleOrder(this IEnumerable<ScheduleItemModel> scheduleItems)
+        {
+            return scheduleItems
+                .OrderBy(e => e.StartTime)
+                .ThenBy(e => e.SubjectTitle)
+                .ThenBy(e => e.Group)
+                .ThenBy(e => e.Teacher);
+        }
     }
 }
