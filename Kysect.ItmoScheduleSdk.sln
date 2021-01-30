@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItmoScheduleApiWrapper", "ItmoScheduleApiWrapper\ItmoScheduleApiWrapper.csproj", "{9AB14B38-ADC2-4466-8EFD-2909F3EC001D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kysect.ItmoScheduleSdk", "Kysect.ItmoScheduleSdk\Kysect.ItmoScheduleSdk.csproj", "{9AB14B38-ADC2-4466-8EFD-2909F3EC001D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItmoScheduleApiWrapper.Samples", "ItmoScheduleApiWrapper.Samples\ItmoScheduleApiWrapper.Samples.csproj", "{1D18272D-1999-46DF-96AE-429E7DA25224}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kysect.ItmoScheduleSdk.Samples", "Kysect.ItmoScheduleSdk.Samples\Kysect.ItmoScheduleSdk.Samples.csproj", "{1D18272D-1999-46DF-96AE-429E7DA25224}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

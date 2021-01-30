@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>ItmoScheduleApiWrapper</AssemblyName>
+    <AssemblyName>Kysect.ItmoScheduleSdk</AssemblyName>
     <RootNamespace>ItmoScheduleApiWrapper</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Alexey Ivnitskiy</Authors>

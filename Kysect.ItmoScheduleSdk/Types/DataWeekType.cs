@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ItmoScheduleApiWrapper.Types
+namespace Kysect.ItmoScheduleSdk.Types
 {
     public enum DataWeekType
     {

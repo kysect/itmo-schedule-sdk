@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace ItmoScheduleApiWrapper.Models
+namespace Kysect.ItmoScheduleSdk.Models
 {
     public class GroupScheduleModel
     {

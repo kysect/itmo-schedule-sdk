@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ItmoScheduleApiWrapper.Models;
-using ItmoScheduleApiWrapper.Types;
+using Kysect.ItmoScheduleSdk.Models;
+using Kysect.ItmoScheduleSdk.Types;
 
-namespace ItmoScheduleApiWrapper.Filters
+namespace Kysect.ItmoScheduleSdk.Filters
 {
     public static class DayTypeScheduleFilter
     {

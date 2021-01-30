@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ItmoScheduleApiWrapper.Types;
+using Kysect.ItmoScheduleSdk.Types;
 
-namespace ItmoScheduleApiWrapper.Models
+namespace Kysect.ItmoScheduleSdk.Models
 {
     public class DayScheduleDescriptor
     {

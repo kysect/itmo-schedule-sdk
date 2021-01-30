@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ItmoScheduleApiWrapper.Types;
+using Kysect.ItmoScheduleSdk.Types;
 using Newtonsoft.Json;
 
-namespace ItmoScheduleApiWrapper.Models
+namespace Kysect.ItmoScheduleSdk.Models
 {
     public class ScheduleItemModel
     {
         [JsonProperty(PropertyName = "data_day")]
-        public DataDayType DataDay { get; set; }
+        public DataDayType? DataDay { get; set; }
 
         public string Status { get; set; }
 

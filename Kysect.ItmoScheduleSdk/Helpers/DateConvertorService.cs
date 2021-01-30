@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Globalization;
-using ItmoScheduleApiWrapper.Types;
+using Kysect.ItmoScheduleSdk.Types;
 
-namespace ItmoScheduleApiWrapper.Helpers
+namespace Kysect.ItmoScheduleSdk.Helpers
 {
     public class DateConvertorService
     {

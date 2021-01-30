@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ItmoScheduleApiWrapper.Models;
+using Kysect.ItmoScheduleSdk.Models;
 
-namespace ItmoScheduleApiWrapper.Filters
+namespace Kysect.ItmoScheduleSdk.Filters
 {
     public class TeacherScheduleFilter
     {

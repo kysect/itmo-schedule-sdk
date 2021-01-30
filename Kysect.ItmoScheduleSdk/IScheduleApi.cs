@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ItmoScheduleApiWrapper.Filters;
-using ItmoScheduleApiWrapper.Models;
-using ItmoScheduleApiWrapper.Types;
+using Kysect.ItmoScheduleSdk.Filters;
+using Kysect.ItmoScheduleSdk.Models;
+using Kysect.ItmoScheduleSdk.Types;
 using Refit;
 
-namespace ItmoScheduleApiWrapper
+namespace Kysect.ItmoScheduleSdk
 {
     public interface IScheduleApi
     {

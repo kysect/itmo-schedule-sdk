@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ItmoScheduleApiWrapper.Models
+namespace Kysect.ItmoScheduleSdk.Models
 {
     public class PersonListModel
     {
