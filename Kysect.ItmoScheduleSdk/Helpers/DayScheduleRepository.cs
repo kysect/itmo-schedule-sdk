@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using ItmoScheduleApiWrapper.Filters;
-using ItmoScheduleApiWrapper.Models;
-using ItmoScheduleApiWrapper.Types;
+using Kysect.ItmoScheduleSdk.Filters;
+using Kysect.ItmoScheduleSdk.Models;
+using Kysect.ItmoScheduleSdk.Types;
 
-namespace ItmoScheduleApiWrapper.Helpers
+namespace Kysect.ItmoScheduleSdk.Helpers
 {
     public static class DayScheduleRepository
     {

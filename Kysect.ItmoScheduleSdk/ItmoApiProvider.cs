@@ -1,6 +1,6 @@
 ﻿using Refit;
 
-namespace ItmoScheduleApiWrapper
+namespace Kysect.ItmoScheduleSdk
 {
     public class ItmoApiProvider
     {
