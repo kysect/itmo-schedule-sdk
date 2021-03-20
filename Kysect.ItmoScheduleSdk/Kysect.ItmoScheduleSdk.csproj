@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Kysect.ItmoScheduleSdk</AssemblyName>
     <RootNamespace>Kysect.ItmoScheduleSdk</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -11,7 +11,7 @@
     <PackageProjectUrl>https://github.com/kysect/itmo-schedule-sdk</PackageProjectUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseUrl>https://github.com/InRedikaWB/ItmoApiWrapper/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Company>Kysect</Company>
   </PropertyGroup>
 
