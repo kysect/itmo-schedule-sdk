@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Refit" Version="4.6.107" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Kysect.ItmoScheduleSdk\Kysect.ItmoScheduleSdk.csproj" />
   </ItemGroup>
 

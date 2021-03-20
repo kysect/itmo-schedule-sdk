@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Kysect.ItmoScheduleSdk.Models
 {
@@ -8,21 +8,21 @@ namespace Kysect.ItmoScheduleSdk.Models
         public string Query { get; set; }
         public string Label { get; set; }
 
-        [JsonProperty(PropertyName = "type_title")]
+        [JsonPropertyName("type_title")]
         public string TypeTitle { get; set; }
 
         public string Today { get; set; }
 
-        [JsonProperty(PropertyName = "today_data_day")]
+        [JsonPropertyName("today_data_day")]
         public string TodayDataDay { get; set; }
 
-        [JsonProperty(PropertyName = "week_type")]
+        [JsonPropertyName("week_type")]
         public string WeekType { get; set; }
 
-        [JsonProperty(PropertyName = "data_day")]
+        [JsonPropertyName("data_day")]
         public string DataDay { get; set; }
 
-        [JsonProperty(PropertyName = "current_week")]
+        [JsonPropertyName("current_week")]
         public string CurrentWeek { get; set; }
 
         public List<ScheduleItemModel> Schedule { get; set; }

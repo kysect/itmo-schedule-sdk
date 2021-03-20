@@ -12,7 +12,7 @@ namespace Kysect.ItmoScheduleSdk.Samples
         {
             var provider = new ItmoApiProvider();
 
-            GroupScheduleModel task = await provider.ScheduleApi.GetGroupScheduleAsync("M3201");
+            GroupScheduleModel task = await provider.ScheduleApi.GetGroupScheduleAsync("M32011");
             List<ScheduleItemModel> lessonList = task.Schedule;
 
             foreach (ScheduleItemModel itemModel in lessonList)
