@@ -1,11 +1,11 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace Kysect.ItmoScheduleSdk.Models
 {
     public class PersonScheduleModel
     {
-        public string Query { get; set; }
+        public int Query { get; set; }
 
         [JsonPropertyName("Label")] public string PersonName { get; set; }
 
@@ -16,7 +16,7 @@ namespace Kysect.ItmoScheduleSdk.Models
         public string Today { get; set; }
 
         [JsonPropertyName("current_week")]
-        public string CurrentWeek { get; set; }
+        public int CurrentWeek { get; set; }
 
         public List<ScheduleItemModel> Schedule { get; set; }
     }

@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace Kysect.ItmoScheduleSdk.Models
@@ -14,7 +14,7 @@ namespace Kysect.ItmoScheduleSdk.Models
         public string Today { get; set; }
 
         [JsonPropertyName("today_data_day")]
-        public string TodayDataDay { get; set; }
+        public int TodayDataDay { get; set; }
 
         [JsonPropertyName("week_type")]
         public string WeekType { get; set; }
@@ -23,7 +23,7 @@ namespace Kysect.ItmoScheduleSdk.Models
         public string DataDay { get; set; }
 
         [JsonPropertyName("current_week")]
-        public string CurrentWeek { get; set; }
+        public int CurrentWeek { get; set; }
 
         public List<ScheduleItemModel> Schedule { get; set; }
     }
