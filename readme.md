@@ -34,6 +34,16 @@ foreach (ScheduleItemModel itemModel personSchedule.Schedule)
 }
 ```
 
+Получение расписания аудитории:
+```cs
+var provider = new ItmoApiProvider();
+RoomScheduleModel roomSchedule = await provider.ScheduleApi.GetRoomSchedule("103");
+foreach (ScheduleItemModel itemModel roomSchedule.Schedule)
+{
+    Console.WriteLine(itemModel.Title);
+}
+```
+
 ## Использованные технологии
 - .NET Standard 2.1
 - [Refit 4.6.107](https://github.com/reactiveui/refit)
