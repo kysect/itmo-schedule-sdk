@@ -28,9 +28,9 @@ namespace Kysect.ItmoScheduleSdk.Types
                 case DataWeekType.Both:
                     return "все";
                 case DataWeekType.Even:
-                    return "четная";
+                    return "чётная";
                 case DataWeekType.Odd:
-                    return "нечетная";
+                    return "нечётная";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(weekType), weekType, null);
             }
