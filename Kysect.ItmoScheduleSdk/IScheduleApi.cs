@@ -14,6 +14,9 @@ namespace Kysect.ItmoScheduleSdk
         [Get("/schedule_lesson_room")]
         Task<List<RoomModel>> GetRoomList();
 
+        [Get("/schedule_lesson_room/{room}")]
+        Task<RoomScheduleModel> GetRoomSchedule(string room);
+
         [Get("/schedule_lesson_group/{group}")]
         Task<GroupScheduleModel> GetGroupScheduleAsync(string group);
 
