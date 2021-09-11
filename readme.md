@@ -1,6 +1,7 @@
 # ITMO schedule sdk
 
 <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard"><img src="https://img.shields.io/badge/.NET%20Standard-2.1-green.svg"></a>
+[![Nuget](https://img.shields.io/nuget/v/Kysect.ItmoScheduleSdk?style=flat-square)](https://www.nuget.org/packages/Kysect.ItmoScheduleSdk/)
 
 Библиотека для работы с API ИТМО.
 
